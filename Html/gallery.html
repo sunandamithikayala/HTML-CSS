@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <style>
+        /* Reset default styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Heading */
+h1 {
+    margin: 20px 0;
+    color: #333;
+}
+
+/* Gallery Container */
+.gallery {
+    display: grid;
+    gap: 15px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Default Grid (for large screens) */
+.gallery {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Gallery Images */
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <h1>Responsive Image Gallery</h1>
+
+    <div class="gallery">
+        <img src="/public/images/sandal.jpg" alt="Image 1">
+        <img src="/public/images/shoe-1.jpg" alt="Image 2">
+        <img src="/public/images/shoe-2.jpg" alt="Image 3">
+        <img src="/public/images/western-2.jpg" alt="Image 4">
+        <img src="/public/images/watch-2.jpg" alt="Image 5">
+        <img src="/public/images/women-2.jpg" alt="Image 6">
+    </div>
+
+</body>
+</html>
